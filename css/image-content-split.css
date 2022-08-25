@@ -1,0 +1,132 @@
+
+.image-content-split {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.image-content-split__inner {
+
+}
+
+.image-content-split__item {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.image-content-split__item + .image-content-split__item {
+  padding-top: 30px;
+}
+
+.image-content-split__item + .image-content-split__item:before {
+  content: '';
+  height: 4px;
+  width: 100%;
+  max-width: 640px;
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('../images/grey-dots-horizontal.png') repeat-x;
+  background-size: auto 2px;
+  background-position: left center;
+}
+
+.image-content-split__item:last-of-type {
+  padding-bottom: 0;
+}
+
+.image-content-split__image-container {
+  text-align: center;
+  font-size: 0;
+}
+
+.image-content-split__image {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+
+.image-content-split__content-container {
+font-size: 1.125rem;
+}
+
+.image-content-split__content-container p {
+  margin: .67em 0;
+}
+
+.image-content-split__content-container ul {
+list-style: none;
+padding: 0;
+margin: 0;
+line-height: 1.67;
+}
+
+.image-content-split__content-container li {
+  position: relative;
+padding: 0 0 0 30px;
+font-weight: bold;
+}
+
+.image-content-split__content-container li:before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: url('../images/checkbox-marked-outline.svg');
+  background-size: contain;
+}
+
+.image-content-split__item-heading {
+font-size: 1.3125rem;
+color: #003B4D;
+margin: 1em 0 -.25em;
+}
+
+@media (min-width: 1024px) {
+  .image-content-split {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 120px 20px;
+  }
+
+  .image-content-split__heading {
+    margin-bottom: 90px;
+  }
+
+  .image-content-split__item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 120px;
+  }
+
+  .image-content-split__item + .image-content-split__item {
+    padding-top: 120px;
+  }
+
+  .image-content-split__image-container {
+    flex: 0 0 46%;
+  }
+
+  .image-content-split__image {
+    max-width: 640px;
+  }
+
+  .image-content-split__content-container {
+    flex: 0 0 46%;
+    font-size: 1.125rem;
+  }
+
+  .image-content-split__item:nth-of-type(even) .image-content-split__content-container {
+    order: -1;
+  }
+
+  .image-content-split__item-heading {
+    font-size: 2.625rem;
+    margin: 0 0 .5em;
+  }
+  .image-content-split__item + .image-content-split__item:before {
+    max-width: none;
+  }
+}
